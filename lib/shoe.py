@@ -4,6 +4,7 @@ class Shoe:
     def __init__(self, brand, size):
         self.brand = brand
         self.size = size
+        self.condition = "New"
     
     def set_size(self, size):
         if isinstance(size, int):
@@ -15,3 +16,7 @@ class Shoe:
         return self._size
     
     size = property(get_size, set_size)
+    
+    def cobble(self):
+        print ("Your shoe is as good as new!")
+        
